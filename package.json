@@ -1,0 +1,23 @@
+{
+  "name": "oracle-data-provider",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build src/index.ts --compile --outfile server",
+    "format": "prettier --check --cache \"src/**/*.ts\"",
+    "format:fix": "prettier --write --cache --cache-strategy metadata \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint --fix \"src/**/*.ts\"",
+    "check": "bun run format && bun run lint",
+    "fix": "bun run format:fix && bun run lint:fix"
+  },
+  "dependencies": {
+    "hono": "^4.8.10"
+  },
+  "devDependencies": {
+    "@hono/eslint-config": "^2.0.2",
+    "@types/bun": "latest",
+    "eslint": "^9.32.0",
+    "prettier": "^3.6.2"
+  }
+}
