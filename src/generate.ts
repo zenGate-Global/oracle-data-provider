@@ -99,7 +99,7 @@ export function randomlyModifyRecords(records: DrumRecord[], targetCount: number
     const record = data[randomIndex]
 
     // Update weight
-    if (Math.random() > 0.5) {
+    if (Math.random() > 0.2) {
       record.weight = parseFloat((10 + Math.random() * 40).toFixed(2))
     }
 
